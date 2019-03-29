@@ -236,7 +236,7 @@ end
 
 def big_shoe_rebounds
 
-all_shoe_sizes =[]
+#all_shoe_sizes =[]
 
 game_hash.each {|team, info|
   info.each {|info_type, data|
@@ -244,9 +244,10 @@ game_hash.each {|team, info|
       data.each {|player, stats|
           stats.each {|point_type, shoe_num|
             if point_type == :shoe
+              shoe_num
               #all_shoe_sizes.push(shoe_num)  
             end
-            
+            binding.pry
             
           }
      
@@ -254,7 +255,7 @@ game_hash.each {|team, info|
   end
   }
 }
-largest_shoe = all_shoe_sizes.sort[-1]
+#largest_shoe = all_shoe_sizes.sort[-1]
 
 
 
