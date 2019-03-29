@@ -259,7 +259,7 @@ game_hash.each {|team, info|
     if info_type == :players
       data.each {|names, stats|
         if stats[:shoe] == largest_shoe
-          stats[:rebounds]
+          return stats[:rebounds]
         end
         
         
