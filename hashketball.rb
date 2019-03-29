@@ -256,7 +256,9 @@ largest_shoe = all_shoe_sizes.sort[-1]
 
 game_hash.each {|team, info|
   info.each {|info_type, data|
-    binding.pry
+    info_type[:players][]
+    
+    #binding.pry
   }
 }
 
