@@ -244,7 +244,7 @@ game_hash.each {|team, info|
       data.each {|player, stats|
           stats.each {|point_type, shoe_num|
             if point_type == :shoe
-              shoe_num
+              return shoe_num
               #all_shoe_sizes.push(shoe_num)  
             end
             binding.pry
