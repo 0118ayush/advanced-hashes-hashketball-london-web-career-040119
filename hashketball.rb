@@ -232,6 +232,36 @@ game_hash.each {|team, info|
 end
 
 
+
+
+def big_shoe_rebounds 
+
+game_hash.each {|team, info|
+  info.each {|info_type, data|
+      data.each {|player, stats|
+          stats.each {|point_type, shoe_num|
+          binding.pry
+            if point_type == :shoe
+              return shoe_num 
+              
+                  
+            end
+                
+          }
+     
+      }
+  
+  }
+}
+
+end 
+
+
+
+
+
+
+
 # def big_shoe_rebounds
   
 #   temp_array = []
@@ -271,36 +301,6 @@ end
 # }
 
 # end 
-
-
-def big_shoe_rebounds 
-
-game_hash.each {|team, info|
-  info.each {|info_type, data|
-      data.each {|player, stats|
-          stats.each {|point_type, shoe_num|
-          binding.pry
-            if point_type == :shoe
-              return shoe_num 
-              
-                  
-            end
-                
-          }
-     
-      }
-  
-  }
-}
-
-end 
-
-
-
-
-
-
-
 
 
 
