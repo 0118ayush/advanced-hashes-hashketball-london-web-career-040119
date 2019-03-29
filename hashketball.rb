@@ -267,7 +267,6 @@ game_hash.each {|team, info|
     end
   }
 }
-binding.pry
 
 end 
 
