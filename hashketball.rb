@@ -240,13 +240,12 @@ game_hash.each {|team, info|
   info.each {|info_type, data|
       data.each {|player, stats|
           stats.each {|point_type, shoe_num|
-          binding.pry
             if point_type == :shoe
-              return shoe_num 
-              
-                  
+              shoe_num 
             end
-                
+            
+            shoe_num.sort[-1]
+            binding.pry
           }
      
       }
