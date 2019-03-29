@@ -240,6 +240,7 @@ all_shoe_sizes =[]
 
 game_hash.each {|team, info|
   info.each {|info_type, data|
+    if info_type == :players
       data.each {|player, stats|
           stats.each {|point_type, shoe_num|
             if point_type == :shoe
@@ -250,11 +251,13 @@ game_hash.each {|team, info|
           }
      
       }
-  
+  end
   }
 }
 largest_shoe = all_shoe_sizes.sort[-1]
-binding.pry
+
+
+
 end 
 
 
