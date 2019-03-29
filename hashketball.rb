@@ -258,12 +258,14 @@ game_hash.each {|team, info|
   info.each {|info_type, data|
     if info_type == :players
       data.each {|names, stats|
-        if stats[:shoe]
+        if stats[:shoe] == largest_shoe
+          stats[:rebounds]
+        end
         
         
       }
     end
-    #binding.pry
+  
   }
 }
 
