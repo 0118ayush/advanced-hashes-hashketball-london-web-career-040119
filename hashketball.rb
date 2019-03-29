@@ -236,23 +236,24 @@ end
 
 def big_shoe_rebounds 
 
+all_shoe_sizes =[]
 game_hash.each {|team, info|
   info.each {|info_type, data|
       data.each {|player, stats|
           stats.each {|point_type, shoe_num|
             if point_type == :shoe
-              shoe_num 
+              all_shoe_sizes.push(shoe_num)  
             end
             
-            shoe_num.sort[-1]
-            binding.pry
+            
           }
      
       }
   
   }
 }
-
+largest_shoe = all_shoe_sizes.sort[-1]
+binding.pry
 end 
 
 
