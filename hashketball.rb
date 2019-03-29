@@ -234,9 +234,10 @@ end
 
 
 
-def big_shoe_rebounds()
+def big_shoe_rebounds
 
 all_shoe_sizes =[]
+
 game_hash.each {|team, info|
   info.each {|info_type, data|
       data.each {|player, stats|
